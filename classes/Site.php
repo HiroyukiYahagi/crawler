@@ -16,5 +16,7 @@ class Site extends Model{
   	return $this->belongs_to('Category');
   }
 
-
+  public static function alives($orm){
+  	return $orm->where('deleted', 0);
+  }
 }
